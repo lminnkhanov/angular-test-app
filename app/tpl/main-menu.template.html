@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/">Shop</a>
+    </div>
+    <div id="navbar" class="">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#!/catalog" ng-show="$ctrl.authUser">Catalog</a></li>
+        <li><a href="#!/sign-up" ng-show="!$ctrl.authUser">Sign up</a></li>
+        <li><a href="#!/log-in" ng-show="!$ctrl.authUser">Log in</a></li>
+        <li><p class="navbar-text" ng-show="$ctrl.authUser">Authorized user</p></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" ng-click="$event.preventDefault(); $ctrl.open()" ng-show="$ctrl.authUser">Cart: {{$ctrl.goods.length}} items</a></li>
+        <li><a href="#!/log-out" ng-show="$ctrl.authUser">Logout</a></li>
+        <li><p class="navbar-text" ng-show="$ctrl.authUser">{{$ctrl.userName}}</p></li>
+      </ul>
+    </div>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Cart</h3>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group" ng-show="goods.length">
+                <li class="list-group-item" ng-repeat="item in goods">
+                  {{item.name}}
+                  <button type="button" class="close" aria-label="Close" ng-click="deleteItem(item)"><span aria-hidden="true">&times;</span></button>
+                </li>
+            </ul>
+            <p ng-show="!goods.length">Empty</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        </div>
+    </script>
+  </div>
+</nav>

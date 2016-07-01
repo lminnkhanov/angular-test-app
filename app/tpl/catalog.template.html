@@ -1,0 +1,86 @@
+<div class="panel panel-default content">
+  <div class="panel-heading"><h3>Cars</h3></div>
+  <div class="panel-body">
+    
+    <form class="form-horizontal form-search">
+      <div class="form-group">
+        <label for="inputDateFrom" class="col-sm-2 control-label">From</label>
+        <div class="col-sm-3">
+          <date-picker dt="$ctrl.search.fromDate"></date-picker>
+        </div>
+
+        <label for="inputDateTo" class="col-sm-1 control-label">To</label>
+        <div class="col-sm-3">
+          <date-picker dt="$ctrl.search.toDate"></date-picker>
+        </div>
+
+        
+        <div class="checkbox col-sm-3">
+          <label>
+            <input type="checkbox" placeholder="" ng-model="$ctrl.search.inStock">
+            In stock only
+          </label>
+        </div>
+        
+        <!-- <div class="col-sm-1">
+          <input type="checkbox" class="form-control" id="inputStock" placeholder="" ng-model="$ctrl.search.inStock">
+        </div>
+        <label for="inputStock" class="col-sm-2 control-label">In stock only</label> -->
+
+      </div>
+      <div class="form-group">
+        <label for="inputPriceFrom" class="col-sm-2 control-label">Price from</label>
+        <div class="col-sm-3">
+          <input type="number" class="form-control" id="inputPriceFrom" placeholder="" ng-model="$ctrl.search.priceFrom">
+        </div>
+
+        <label for="inputPriceTo" class="col-sm-1 control-label">to</label>
+        <div class="col-sm-3">
+          <input type="number" class="form-control" id="inputPriceTo" placeholder="" ng-model="$ctrl.search.priceTo">
+        </div>
+
+        <label for="inputColor" class="col-sm-1 control-label">Color</label>
+        <div class="col-sm-2">
+          <select class="form-control" id="inputColor" placeholder="" ng-model="$ctrl.search.color">
+            <option value="">Any</option>
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="white">White</option>
+            <option value="yellow">Yellow</option>
+          </select>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <ul class="goods">
+    <li class="thumbnail" ng-repeat="item in $ctrl.items | filter:$ctrl.searchFunc">
+      <img ng-src="{{item.img}}" alt="{{item.name}}" class="thumb img-thumbnail"/>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="row descr">
+            <div class="col-sm-4"><strong>{{item.name}}</strong></div>
+            <div class="col-sm-4">{{item.date | date: "MMMM dd, yyyy"}}</div>
+            <div class="col-sm-4">{{item.price | currency}}</div>
+          </div>
+          <div class="row descr">
+            <div class="col-sm-4"><span class="badge" ng-style="{'background-color': '{{item.color}}'}">{{item.color}}</span></div>
+            <div class="col-sm-4">{{item.inStock | checkmark}} In stock</div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-success btn-sm" ng-click="$ctrl.addGoods(item)" ng-show="$ctrl.orders.indexOf(item) === -1">Order</button>
+              <p ng-show="$ctrl.orders.indexOf(item) !== -1">In a cart</p>
+            </div>
+          </div>
+          <div class="row descr">
+            <div class="col-sm-4" rating="{{item.rating}}" prefix="{{item.id}}" stars-count="5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>

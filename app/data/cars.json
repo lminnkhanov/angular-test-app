@@ -1,0 +1,102 @@
+[
+	{
+		"id": 1,
+		"name": "Audi Q1",
+		"color": "red",
+		"date": "2015-01-01",
+		"price": "90.5",
+		"rating": "2",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Audi Q2",
+		"color": "black",
+		"date": "2014-05-22",
+		"price": "100.5",
+		"rating": "1",
+		"inStock": false,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 3,
+		"name": "BMW X1",
+		"color": "blue",
+		"date": "2016-02-10",
+		"price": "50.35",
+		"rating": "4.8",
+		"inStock": false,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 4,
+		"name": "BMW X2",
+		"color": "green",
+		"date": "2015-03-04",
+		"price": "30",
+		"rating": "3.8",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 5,
+		"name": "BMW X3",
+		"color": "red",
+		"date": "2016-10-15",
+		"price": "55.5",
+		"rating": "4",
+		"inStock": false,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Audi Q3",
+		"color": "black",
+		"date": "2014-05-30",
+		"price": "82.2",
+		"rating": "5",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 7,
+		"name": "Opel Mokka",
+		"color": "blue",
+		"date": "2015-07-09",
+		"price": "90",
+		"rating": "3.2",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Opel Corsa",
+		"color": "red",
+		"date": "2012-05-20",
+		"price": "79.9",
+		"rating": "4.5",
+		"inStock": false,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 9,
+		"name": "Mercedes benz C",
+		"color": "yellow",
+		"date": "2014-12-21",
+		"price": "88.2",
+		"rating": "3",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	},
+	{
+		"id": 10,
+		"name": "Mercedes benz E",
+		"color": "blue",
+		"date": "2012-09-18",
+		"price": "150",
+		"rating": "3.3",
+		"inStock": true,
+		"img": "img/auto.jpg"
+	}
+]

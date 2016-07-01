@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-validate/src/validate.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-md5/angular-md5.js"></script>
+    <script src="js/app.module.js"></script>
+    <script src="js/catalog.module.js"></script>
+    <script src="js/core.module.js"></script>
+    <script src="js/menu.module.js"></script>
+    <script src="js/user.module.js"></script>
+  </head>
+  <body>
+
+    <main-menu></main-menu>
+
+    <div ng-view>
+    </div>
+
+  </body>
+</html>

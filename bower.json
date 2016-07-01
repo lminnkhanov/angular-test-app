@@ -1,0 +1,21 @@
+{
+  "name": "angular-testapp",
+  "description": "A test project for AngularJS",
+  "version": "0.0.1",
+  "homepage": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "angular-local-storage": "0.2.x",
+    "bootstrap": "3.3.x",
+    "jquery": "2.2.x",
+    "moment": "2.x.x",
+    "angular-bootstrap": "1.x.x",
+    "angular-animate": "1.5.x",
+    "angular-ui-validate": "1.2.x",
+    "angular-md5": "0.1.x"
+  }
+}
