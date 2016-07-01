@@ -77,7 +77,7 @@ body {
 .rating {float: left;}
 .rating label {float:right; width:16px; height: 16px; overflow:hidden;
  white-space:nowrap; cursor:pointer; text-indent: -9999px; }
-.rating:not(:checked) > input { position:absolute; top:-9999px; clip:rect(0,0,0,0); }
+.rating:not(:checked) > input { position:absolute; left:-9999px; clip:rect(0,0,0,0); }
 .rating:not(:checked) > label {background: url('../img/star.png') no-repeat 0 -16px;}
 .rating > input:checked ~ label {
 width: 16px;height: 16px;background: url('../img/star.png') no-repeat 0 0px;}
